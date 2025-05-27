@@ -45,6 +45,11 @@ app.use(helmet());
 // Secure against param pollutions
 app.use(hpp());
 
+// Simple /hello route
+app.get("/", (req, res) => {
+  res.send("Hello from romykundal.dev!");
+});
+
 // Setup routing
 app.use("/users", user);
 
