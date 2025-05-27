@@ -1,18 +1,30 @@
-# romykundal.dev node-express-typescript
-Basic starter project for any project using Node.js + Express.js + TypeScript. Personally, I'd recommend for small to medium projects, as the imagine with a bigger project, you would need extra folders or structure. However, this template should be malleable enough for a good starting template for most personal projects.
+# romykundal.dev api-typescript-express
+A clean and minimal starter project for Node.js, Express.js, and TypeScript, ideal for small to medium-sized applications.
+
+Designed with simplicity and scalability in mind, this boilerplate offers a solid foundation for personal or MVP projects.
+
+While larger applications may require additional folder structuring, this template is easily extensible and flexible enough to evolve with your project’s needs.
 
 ## Features
-Most of the useful features are for easier configuration, although there are some other packages setup to make it easier for you to start your project without worrying about installing them.
+Most of the essential features are pre-configured to streamline setup, letting you focus on development rather than boilerplate. Additional packages are also included to accelerate your project from the get-go.
 
-- TypeScript Support
-- Test-ready with Jest configured with TypeScript
-- Async Handling with error handling if error is thrown
-- Flexible for any database or ORMs
-- Path aliases for cleaner imports
-- Nodemon for refresh on save
-- Setup build script for production; no ts-node for production
-- Security middlewares setup
-- Environment variables configured on load
+Full TypeScript support for type-safe development
+
+Jest pre-configured for seamless testing with TypeScript
+
+Async/await-ready with built-in error handling middleware
+
+Database/ORM agnostic, allowing flexible integration
+
+Path aliases for cleaner and maintainable imports
+
+Nodemon for automatic server restarts on file changes
+
+Optimized production build with dedicated scripts (no ts-node in prod)
+
+Pre-configured security middlewares for safer applications
+
+Environment variables autoloaded, ready for multi-environment configs
 
 # Setup
 
@@ -73,7 +85,7 @@ Passing middleware into the asyncHandler will allow the server to automatically 
 export const getUsers = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {
     // Example user, get from database
-    const user = [{ name: "John Doe" }, { name: "Jaen Doe" }];
+    const user = [{ name: "romy kundal" }, { name: "romy Gharota" }];
 
     // Return json with success message
     res.status(200).json(new ApiSuccess<User[]>(user, "Success!"));
@@ -102,3 +114,7 @@ If you add extra folders to this template and would like to use them with aliase
 3. Go into ```package.json```
 4. Add extra paths inside of ```{_moduleAliases: ... }``` (for production build)
 
+## 🧑‍💻 Developer Info
+- **Author**: [Rohit Kumar](https://www.romykundal.dev/)  
+- **GitHub**: [@romykundal](https://github.com/romykundal)  
+- **Email**: romykundal@gmail.com

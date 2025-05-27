@@ -12,7 +12,7 @@ import { ApiError } from "@/utils/ApiError";
 export const getUsers = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {
     // Example user, get from database
-    const user = [{ name: "John Doe" }, { name: "Jaen Doe" }];
+    const user = [{ name: "romy kundal" }, { name: "romy Gharota" }];
 
     // Return json with success message
     res.status(200).json(new ApiSuccess<User[]>(user, "Success!"));
